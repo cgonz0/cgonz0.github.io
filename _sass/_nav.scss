@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+  padding: 5px;
+}
+
+li {
+  display: inline;
+}
+
+nav a {
+  color: darkcyan;
+  text-decoration: none;
+  &:hover {
+    color: blueviolet;
+  }
+}
+
+.current {
+  border-bottom: 3px solid blueviolet;
+}

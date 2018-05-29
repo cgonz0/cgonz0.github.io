@@ -2,21 +2,19 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ "/css/main.css" | relative_url }}" rel="stylesheet">
 	<title>c gonz</title>
 </head>
 <body>
 
-<nav>
-  <ul>
-    <li><a href="{{ "/index.html" | relative_url }}">Home</a></li>
-    <li><a href="{{ "/linkto.html" | relative_url }}">Link2</a></li>
-  </ul>
-
-</nav>
+{% include nav.html %}
 
 {{content}}
 
+<footer>
+
+</footer>
 </body>
 
 </html>
