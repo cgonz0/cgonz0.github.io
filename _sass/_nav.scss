@@ -1,6 +1,14 @@
+@import "colors";
+
+nav {
+  margin-bottom: 25px;
+}
+
 ul {
   list-style: none;
   padding: 5px;
+  text-align: center;
+
 }
 
 li {
@@ -8,13 +16,16 @@ li {
 }
 
 nav a {
-  color: darkcyan;
+  color: $black;
   text-decoration: none;
+  text-transform: uppercase;
+  margin: 0px 15px;
+  font-size: 12px;
   &:hover {
-    color: blueviolet;
+    color: $aqua;
   }
 }
 
 .current {
-  border-bottom: 3px solid blueviolet;
+  border-bottom: 3px solid $aqua;
 }

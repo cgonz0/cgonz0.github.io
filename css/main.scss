@@ -2,8 +2,86 @@
 ---
 
 @import "nav";
+@import "colors";
+@import "header";
 
-html, body, p {
+html, body  {
   margin: 0 auto;
   padding: 0;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+.title h1 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+
+//Grid
+.grid {
+  display: grid;
+
+  margin: auto;
+  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+}
+
+
+//About
+
+.about {
+  height: 500px;
+  background: url('{{ "/img/about_bg.jpg" | relative_url }}') 50% 35% / 145%;
+}
+
+.a {
+  grid-area: 3 / 5 / 11 / 11;
+}
+
+.b {
+  grid-area: 4 / 4 / 5 / 7;
+  margin-left: 30px;
+
+}
+
+.c {
+  grid-area: 6 / 2 / 11 / 6;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+//Skills
+
+.skills {
+  height: 500px;
+  background: linear-gradient($gradient-aqua, $gradient-purple);
+  h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  li {
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+    line-height: 1.4rem;
+  }
+}
+
+.e {
+  grid-area: 4 / 4 / 5  / 7;
+  margin-left: 30px;
+}
+
+.skill-des {
+  grid-area: 5 / 5 / 6 / 7;
+}
+
+.skill-dev {
+  grid-area: 5 / 8 / 6 / 10;
 }
