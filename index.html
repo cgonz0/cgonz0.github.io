@@ -2,4 +2,136 @@
 layout: default
 ---
 
-<h2>Hello.</h2>
+
+<!-- ABOUT -->
+<div class="grid about" id="about">
+
+  <div class="a pop-image">
+      <img src="{{ "/img/about_crop.jpg" | relative_url }}">
+  </div>
+
+  <div class="b title">
+      <h1>Hello. I'm Cristina.</h1>
+  </div>
+
+  <div class="c desc">
+  <p>
+      I’m a Miami-born and raised, San Francisco-based visual designer with a focus on both print & web/mobile. I enjoy engaging with multiple mediums and mixing different areas of design for the best possible solution. I am currently implementing my visual design background to create enjoyable user experiences & interfaces and delving into the front-end world.
+      <br>
+      <br>
+      I love collaborating, conceptual design, typography, photographing mid-century modern architecture.
+  </p>
+  </div>
+
+</div>
+
+
+<!-- SKILLS -->
+<div class="grid skills" id="skills">
+
+    <div class="d title">
+        <h1>Skills / Tools</h1>
+    </div>
+
+      <div class="skill-des">
+        <h3>Design & Animation</h3>
+        <ul>
+          <li>Illustrator</li>
+          <li>Photoshop</li>
+          <li>InDesign</li>
+          <li>Afer Effects</li>
+          <br>
+          <li>Flash</li>
+          <li>Maya</li>
+        </ul>
+      </div>
+
+      <div class="skill-dev">
+        <h3>Development</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 (SASS, Flexbox & CSS Grid)</li>
+          <li>Javascript</li>
+          <br>
+          <li>React.js</li>
+          <li>jQuery</li>
+          <br>
+          <li>Bootstrap</li>
+          <li>Wordpress</li>
+          <li>Jekyll</li>
+          <br>
+          <li>Gulp.js</li>
+          <li>Webpack</li>
+          <li>Git</li>
+        </ul>
+      </div>
+
+</div>
+
+
+<!-- WORK -->
+<div class="grid work" id="work">
+
+  <div class="e pop-image">
+      <img src="{{ "/img/work_crop.jpg" | relative_url }}">
+  </div>
+
+  <div class="f title">
+      <h1>My Work</h1>
+  </div>
+
+  <div class="g desc">
+  <p>
+    VIEW SOME OF MY
+    <ul>
+      <li>graphic design</li>
+      <li>motion graphic</li>
+      <li>development</li>
+      <li>ui/ux</li>
+      <li>packaging</li>
+    </ul>
+    WORK
+  </p>
+  </div>
+
+  <div class="h portfolio">
+      <h2>
+        <a href="www.cgonzadesign.com">www.cgonzadesign.com
+          <span>
+            <i class="fas fa-long-arrow-alt-right fa-lg"></i>
+          </span>
+       </a>
+      </h2>
+  </div>
+
+</div>
+
+
+<!-- Contact -->
+<div class="grid contact" id="contact">
+
+  <div class="i desc">
+    or simply send an email to <a href="mailto:hello@cgonzadesign.com">hello@cgonzadesign.com</a>
+  </div>
+
+  <div class="j title">
+      <h1>Get in Touch</h1>
+  </div>
+
+  <div class="contact-form">
+    <form action="https://getsimpleform.com/messages?form_api_token=919d85624a7315588a8ca33c4e92d8c2" method="post">
+      <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+      <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+      <!-- all your input fields here.... -->
+      <div class="contact-input">
+        <input class="contact-control" type='text' placeholder='Name' name='name' />
+        <input class="contact-control" type='email' placeholder='Email' name='email'/>
+        <input class="contact-control" type='title' placeholder='Subject' name='title'/>
+        <textarea class="contact-control msg" placeholder='Message' name="message"></textarea>
+      </div>
+      <div class="contact-button">
+        <input class="contact-btn" type='submit' value='Send' />
+      </div>
+    </form>
+  </div>
+</div>
