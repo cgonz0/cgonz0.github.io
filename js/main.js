@@ -25,10 +25,10 @@ $(window).scroll(function() {
       $(this).addClass('active');
 
       var target = this.hash,
-          nav = target;
+        //   nav = target;
       $target = $(target);
       $('html, body').stop().animate({
-          'scrollTop': $target.offset().top-75
+          'scrollTop': $target.offset().top
       }, 500, 'swing', function () {
           window.location.hash = target;
           $(document).on("scroll", onScroll);
@@ -36,12 +36,16 @@ $(window).scroll(function() {
   });
 });
 
+
+
+
+
 function onScroll(event){
   var scrollPos = $(document).scrollTop();
   $('#menu a').each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      if (refElement.position().top-70 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
           $('#menu ul li a').removeClass("active");
           currLink.addClass("active");
       }
