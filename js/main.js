@@ -1,6 +1,3 @@
-// console.log('hey');
-// alert("hello javascript");
-
 
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
@@ -13,6 +10,7 @@ $(window).scroll(function() {
           $('.nav, #menu').removeClass('fix');
       }
 });
+
 
   //smoothscroll
   $('a[href^="#"]').on('click', function (e) {
@@ -37,15 +35,12 @@ $(window).scroll(function() {
 });
 
 
-
-
-
 function onScroll(event){
   var scrollPos = $(document).scrollTop();
   $('#menu a').each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
-      if (refElement.position().top-70 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
           $('#menu ul li a').removeClass("active");
           currLink.addClass("active");
       }
