@@ -96,7 +96,7 @@ layout: default
 
   <div class="h portfolio">
       <h2>
-        <a href="www.cgonzadesign.com">www.cgonzadesign.com
+        <a href="http://www.cgonzadesign.com">www.cgonzadesign.com
           <span>
             <i class="fas fa-long-arrow-alt-right fa-lg"></i>
           </span>
@@ -108,30 +108,47 @@ layout: default
 
 
 <!-- Contact -->
-<div class="grid contact" id="contact">
+<div class="anchor" id="contact">
+  <div class="grid contact">
 
-  <div class="i desc">
-    or simply send an email to <a href="mailto:hello@cgonzadesign.com">hello@cgonzadesign.com</a>
-  </div>
+    <div class="i desc">
+      or simply send an email to <a href="mailto:hello@cgonzadesign.com">hello@cgonzadesign.com</a>
+    </div>
 
-  <div class="j title">
-      <h1>Get in Touch</h1>
-  </div>
+    <div class="j title">
+        <h1>Get in Touch</h1>
+    </div>
 
-  <div class="contact-form">
-    <form action="https://getsimpleform.com/messages?form_api_token=919d85624a7315588a8ca33c4e92d8c2" method="post">
-      <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-      <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
-      <!-- all your input fields here.... -->
-      <div class="contact-input">
-        <input class="contact-control" type='text' placeholder='Name' name='name' />
-        <input class="contact-control" type='email' placeholder='Email' name='email'/>
-        <input class="contact-control" type='title' placeholder='Subject' name='title'/>
-        <textarea class="contact-control msg" placeholder='Message' name="message"></textarea>
-      </div>
-      <div class="contact-button">
-        <input class="contact-btn" type='submit' value='Send' />
-      </div>
-    </form>
+    <div class="contact-form">
+      <form action="https://getsimpleform.com/messages?form_api_token=919d85624a7315588a8ca33c4e92d8c2" method="post">
+        <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+        <input type='hidden' name='redirect_to' value='http://fooey.com/thank-you.html' />
+        <!-- all your input fields here.... -->
+        <div class="contact-input">
+
+          <input class="contact-control" name="name" id="name"  required="required" />
+          <label for="name">Name</label>
+
+          <input class="contact-control" name="email" id="email" required="required"/>
+          <label for="email">Email</label>
+
+          <input class="contact-control" name="subject" id="subject" required="required"/>
+          <label for="subject">Subject</label>
+
+          <textarea class="contact-control msg" name="message" id="message" required="required"></textarea>
+          <label for="message" class="msg">Message</label>
+
+        </div>
+        <div class="contact-button">
+          <input class="contact-btn" type='submit' value='Send' />
+        </div>
+      </form>
+    </div>
   </div>
 </div>
+
+
+<!-- <li>
+  <input id="title" name="title" size="40" required="required" />
+  <label for="title">Title</label>
+</li> -->

@@ -1,6 +1,3 @@
-// console.log('hey');
-// alert("hello javascript");
-
 
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
@@ -8,11 +5,22 @@ $(document).ready(function () {
 //sticky at top
 $(window).scroll(function() {
   if ($(this).scrollTop() > 255) {
-              $('.nav, #menu').addClass('fix');
-      } else {
-          $('.nav, #menu').removeClass('fix');
-      }
+        $('.nav, #menu').addClass('fix');
+        $('.logo-fix > img').show();
+        $('.logo-fix > img').css( {
+            transition: 'opacity 0.5s linear',
+            opacity: 1
+        } );
+    } else {
+        $('.nav, #menu').removeClass('fix');
+        $('.logo-fix > img').css( {
+        transition: 'opacity 0.25s linear',
+        opacity: 0
+    } );
+    //  $('.logo-fix > img').hide();
+    }
 });
+
 
   //smoothscroll
   $('a[href^="#"]').on('click', function (e) {
@@ -25,7 +33,6 @@ $(window).scroll(function() {
       $(this).addClass('active');
 
       var target = this.hash,
-        //   nav = target;
       $target = $(target);
       $('html, body').stop().animate({
           'scrollTop': $target.offset().top
@@ -35,9 +42,6 @@ $(window).scroll(function() {
       });
   });
 });
-
-
-
 
 
 function onScroll(event){
