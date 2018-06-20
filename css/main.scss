@@ -216,7 +216,7 @@ p {
   }
 }
 
-//Contact form label animaiton
+//Contact form label animation
 label {
   position:relative;
   color: rgba($black, .5 );
@@ -285,6 +285,14 @@ textarea:valid:focus + label {
 
 .active {
   border-bottom: 3px solid $aqua;
+}
+
+.logo-fix > img {
+  position: absolute;
+  opacity:0;
+  float: left;
+  width: 50px;
+  padding:14px 35px;
 }
 
 .fix{

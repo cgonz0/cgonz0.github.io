@@ -5,10 +5,20 @@ $(document).ready(function () {
 //sticky at top
 $(window).scroll(function() {
   if ($(this).scrollTop() > 255) {
-              $('.nav, #menu').addClass('fix');
-      } else {
-          $('.nav, #menu').removeClass('fix');
-      }
+        $('.nav, #menu').addClass('fix');
+        $('.logo-fix > img').show();
+        $('.logo-fix > img').css( {
+            transition: 'opacity 0.5s linear',
+            opacity: 1
+        } );
+    } else {
+        $('.nav, #menu').removeClass('fix');
+        $('.logo-fix > img').css( {
+        transition: 'opacity 0.25s linear',
+        opacity: 0
+    } );
+    //  $('.logo-fix > img').hide();
+    }
 });
 
 
@@ -23,7 +33,6 @@ $(window).scroll(function() {
       $(this).addClass('active');
 
       var target = this.hash,
-        //   nav = target;
       $target = $(target);
       $('html, body').stop().animate({
           'scrollTop': $target.offset().top
@@ -40,7 +49,7 @@ function onScroll(event){
   $('#menu a').each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      if (refElement.position().top-70 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
           $('#menu ul li a').removeClass("active");
           currLink.addClass("active");
       }
