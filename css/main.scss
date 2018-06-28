@@ -4,6 +4,7 @@
 @import "nav";
 @import "colors";
 @import "header";
+@import "mixins";
 
 html, body  {
   margin: 0 auto;
@@ -38,11 +39,24 @@ p {
 }
 
 
+//Image crop
+.pop-image img {
+  width: 95%;
+  @media #{$xs-only} {
+    display: none;
+  }
+}
+
+
 //About
 .about {
   height: 100vh;
   width: 100%;
   background: url('{{ "/img/about_bg.jpg" | relative_url }}') 50% 35% / 145%;
+  background-size: cover;
+  // @media #{$xs-only} {
+  //   background-size: cover;
+  // }
 }
 
 .a {
@@ -50,13 +64,20 @@ p {
 }
 
 .b {
-  grid-area: 4 / 5 / 5 / 8;
+  grid-area: 4 / 5 / 5 / 9;
+  @media #{$xs-only} {
+    grid-area: 3 / 2 / 3 / 9;
+  }
 }
 
 .c {
   grid-area: 6 / 3 / 11 / 7;
   margin-left: 30px;
   margin-right: 30px;
+  @media #{$xs-only} {
+    grid-area: 5 / 2 / 12 / 12;
+    margin: 0;
+  }
 }
 
 
@@ -78,15 +99,24 @@ p {
 }
 
 .d {
-  grid-area: 4 / 5 / 5  / 7;
+  grid-area: 4 / 5 / 5 / 9  ;
+  @media #{$xs-only} {
+    grid-area: 3 / 2 / 3 / 7;
+  }
 }
 
 .skill-des {
   grid-area: 6 / 5 / 11 / 7;
+  @media #{$xs-only} {
+    grid-area: 5 / 2 / 10 / 7;
+  }
 }
 
 .skill-dev {
   grid-area: 6 / 8 / 15 / 111;
+  @media #{$xs-only} {
+    grid-area: 5 / 7 / 12 / 12;
+  }
 }
 
 
@@ -95,10 +125,14 @@ p {
   height: 100vh;
   width: 100%;
   background: url('{{ "/img/work_bg.jpg" | relative_url }}') 50% 28% / 100%;
+  background-size: cover;
   h2 {
     font-weight: 400;
     font-size: 18px;
   }
+  // @media #{$xs-only} {
+  //   background-size: cover;
+  // }
 }
 
 .e {
@@ -106,8 +140,10 @@ p {
 }
 
 .f {
-  grid-area: 4 / 5 / 5 / 8;
-
+  grid-area: 4 / 5 / 5 / 9;
+  @media #{$xs-only} {
+    grid-area: 3 / 2 / 3 / 10;
+  }
 }
 
 .g {
@@ -122,10 +158,14 @@ p {
     line-height: 1.5rem;
     font-weight: 700;
   }
+  @media #{$xs-only} {
+    grid-area: 5 / 2 / 9 / 5;
+    margin: 0;
+  }
 }
 
 .h {
-  grid-area: 6 / 6 / 8 / 9;
+  grid-area: 6 / 6 / 8 / 10;
   padding-left: 10px;
   margin-top: -3px;
   a {
@@ -141,6 +181,11 @@ p {
     &:hover span {
       visibility: visible;
     }
+  }
+  @media #{$xs-only} {
+    grid-area: 10 / 2 / 11 / 12;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -169,10 +214,16 @@ p {
     color: white;
     text-decoration: none;
   }
+  @media #{$xs-only} {
+    grid-area: 2 / 6 / 3 / 12;
+  }
 }
 
 .j {
-  grid-area: 4 / 5 / 4 / 7;
+  grid-area: 4 / 5 / 5 / 9;
+  @media #{$xs-only} {
+    grid-area: 3 / 2 / 4 / 7;
+  }
 }
 
 
@@ -180,6 +231,9 @@ p {
 .contact-form {
   grid-area: 5 / 5 / 10 / 9;
   margin-top: 20px;
+  @media #{$xs-only} {
+    grid-area: 4 / 2 / 10 / 12;
+  }
 }
 
 .contact-input {
@@ -228,12 +282,14 @@ label {
 }
 
 input:valid + label,
-textarea:valid + label,
- {
+textarea:valid + label, {
   left: -6em;
   transition:all 0ms ease;
   transition-property: color;
   color: white;
+  @media #{$xs-only} {
+    visibility: hidden;
+  }
 }
 
 input:valid:focus + label,
@@ -279,6 +335,9 @@ textarea:valid:focus + label {
     &:hover {
       border-bottom: 3px solid $aqua;
     }
+    @media #{$xs-only} {
+      margin: 0 20px;
+    }
   }
 }
 
@@ -288,18 +347,21 @@ textarea:valid:focus + label {
 
 .logo-fix > img {
   position: absolute;
-  opacity:0;
+  opacity: 0;
   float: left;
   width: 50px;
-  padding:14px 35px;
+  padding: 14px 35px;
+  @media #{$xs-only} {
+    visibility: hidden;
+  }
 }
 
 .fix{
   position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  margin:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
 }
 
 //Footer
@@ -308,7 +370,7 @@ textarea:valid:focus + label {
   color: $black;
   text-align: center;
   p {
-    padding-top:25px;
+    padding-top: 25px;
   }
   a {
     color: $aqua;
@@ -320,7 +382,7 @@ textarea:valid:focus + label {
   color: $aqua;
   i {
   margin-right: 20px;
-  margin-top:10px;
+  margin-top: 10px;
   }
 }
 
