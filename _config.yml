@@ -46,7 +46,6 @@ sass:
   style: compressed
   # sass_dir: _sass
 
-exclude: ["_dev",
-          "gulpfile.js",
+exclude: ["gulpfile.js",
           "node_modules",
           "package.json"]
