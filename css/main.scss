@@ -117,6 +117,7 @@ p {
   grid-area: 6 / 8 / 15 / 111;
   @media #{$xs-only} {
     grid-area: 5 / 7 / 12 / 12;
+    padding-top: 19px;
   }
 }
 
@@ -184,7 +185,7 @@ p {
     }
   }
   @media #{$xs-only} {
-    grid-area: 10 / 2 / 11 / 12;
+    grid-area: 11 / 2 / 11 / 12;
     margin: 0;
     padding: 0;
   }
@@ -216,7 +217,7 @@ p {
     text-decoration: none;
   }
   @media #{$xs-only} {
-    grid-area: 2 / 6 / 3 / 12;
+    grid-area: 2 / 6 / 3 / 13;
   }
 }
 
