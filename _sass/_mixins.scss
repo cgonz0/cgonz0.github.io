@@ -1,0 +1,13 @@
+$port: "(orientation: portraint)";
+$land: "(orientation: landscape)";
+$mob: "screen and (max-width: 420px)";
+$mob-up: "screen and (min-width: 421px)";
+$xs-only: "screen and (max-width: 767px)";
+$sm-up: "screen and (min-width: 768px)";
+$md-up: "screen and (min-width: 992px)";
+$lg-up: "screen and (min-width:1200px)";
+$xl-up: "screen and (min-width:1440px)";
+$sm-down: "screen and (max-width: 991px)";
+$md-down: "screen and (max-width:1199px)";
+$lg-down: "screen and (max-width:1438px)";
+$sm-only: "screen and (max-width: 991px) and (min-width: 769px)";
