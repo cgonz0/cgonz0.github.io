@@ -271,10 +271,11 @@ p {
   }
 }
 
-input[type='submit'] {
+input[type='submit'], input[type='text'], input[type='textarea'] {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
+   border-radius: 0;
 }
 
 //Contact form label animation
