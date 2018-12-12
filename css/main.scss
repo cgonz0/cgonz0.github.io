@@ -340,16 +340,13 @@ textarea:valid:focus + label {
     text-transform: uppercase;
     margin: 0px 40px;
     font-size: 12px;
-    &:hover {
+    &:active {
       border-bottom: 3px solid $aqua;
     }
     @media #{$xs-only} {
       margin: 0 20px;
       &:active {
         border-bottom: 3px solid $aqua;
-      }
-      &:hover {
-        border-bottom: none;
       }
     }
   }
