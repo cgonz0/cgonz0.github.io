@@ -271,6 +271,12 @@ p {
   }
 }
 
+input[type='submit'] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
 //Contact form label animation
 label {
   position:relative;
@@ -334,11 +340,17 @@ textarea:valid:focus + label {
     text-transform: uppercase;
     margin: 0px 40px;
     font-size: 12px;
-    &:active, &:hover {
+    &:hover {
       border-bottom: 3px solid $aqua;
     }
     @media #{$xs-only} {
       margin: 0 20px;
+      &:active {
+        border-bottom: 3px solid $aqua;
+      }
+      &:hover {
+        border-bottom: none;
+      }
     }
   }
 }
