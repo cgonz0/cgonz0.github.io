@@ -271,7 +271,7 @@ p {
   }
 }
 
-input[type='submit'], input[type='text'], input[type='textarea'] {
+input[type='submit'], input[type='text'], textarea[type='textarea'] {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
