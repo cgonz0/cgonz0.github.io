@@ -366,6 +366,12 @@ textarea:valid:focus + label {
   margin-top: -50px;
 }
 
+@media #{$mob} {
+  .skills {
+    height: auto;
+  }
+}
+
 @media #{$sm-up}, #{$sm-down} {
   .c {
     grid-area: 6 / 3 / 11 / 8;
