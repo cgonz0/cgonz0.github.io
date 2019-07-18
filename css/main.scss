@@ -33,31 +33,25 @@ p {
 
 //Grid
 .grid {
-  display: grid;
-
-  margin: auto;
-  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
 }
 
 
 //Image crop
 .pop-image img {
-  width: 95%;
-  @media #{$xs-only} {
-    display: none;
-  }
+  display: none;
 }
 
 
 //About
 .about {
   height: 100vh;
-  width: 100%;
+  // width: 100%;
   background: url('{{ "/img/about_bg.jpg" | relative_url }}') 50% 35% / 145%;
   background-size: cover;
-  // @media #{$xs-only} {
-  //   background-size: cover;
-  // }
 }
 
 .a {
@@ -65,30 +59,19 @@ p {
 }
 
 .b {
-  grid-area: 4 / 5 / 5 / 9;
-  @media #{$xs-only} {
-    grid-area: 3 / 2 / 3 / 9;
-  }
+  grid-area: 3 / 2 / 3 / 9;
 }
 
 .c {
-  grid-area: 6 / 3 / 11 / 7;
-  margin-left: 30px;
-  margin-right: 30px;
-  @media #{$sm-down} {
-    grid-area: 6 / 3 / 11 / 8;
-  }
-  @media #{$xs-only} {
     grid-area: 5 / 2 / 12 / 12;
     margin: 0;
-  }
 }
 
 
 //Skills
 .skills {
-  height: 100vh;
-  width: 100%;
+  height: calc(100vh + 100px);
+  // width: 100%;
   background: linear-gradient($gradient-aqua, $gradient-purple);
   h3 {
     text-transform: uppercase;
@@ -103,23 +86,34 @@ p {
 }
 
 .d {
-  grid-area: 4 / 5 / 5 / 9  ;
-  @media #{$xs-only} {
-    grid-area: 3 / 2 / 3 / 7;
-  }
+  grid-area: 3 / 2 / 3 / 7;
 }
 
 .skill-des {
-  grid-area: 6 / 5 / 11 / 7;
-  @media #{$xs-only} {
-    grid-area: 5 / 2 / 10 / 7;
-  }
+  grid-area: 5 / 2 / 9 / 7;
 }
 
 .skill-dev {
-  grid-area: 6 / 8 / 15 / 111;
-  @media #{$xs-only} {
-    grid-area: 5 / 7 / 12 / 12;
+  grid-area: 5 / 6 / 7 / 12;
+}
+
+.skillset {
+  grid-area: 10 / 2 / 11 / 12;
+  font-size: 12px;
+  ul {
+    text-align: left;
+    li {
+      display: inline-block;
+      background-color: rgba(255,255,255,.3);
+      padding: 5px 8px;
+      margin: 5px;
+      border-radius: 5px;
+      &:hover {
+        background-color: rgba(255,255,255,.7);
+        color: $gradient-purple;
+        cursor: default;
+      }
+    }
   }
 }
 
@@ -127,16 +121,13 @@ p {
 //Work
 .work {
   height: 100vh;
-  width: 100%;
+  // width: 100%;
   background: url('{{ "/img/work_bg.jpg" | relative_url }}') 50% 28% / 100%;
   background-size: cover;
   h2 {
     font-weight: 400;
     font-size: 18px;
   }
-  // @media #{$xs-only} {
-  //   background-size: cover;
-  // }
 }
 
 .e {
@@ -144,15 +135,12 @@ p {
 }
 
 .f {
-  grid-area: 4 / 5 / 5 / 9;
-  @media #{$xs-only} {
-    grid-area: 3 / 2 / 3 / 10;
-  }
+  grid-area: 3 / 2 / 3 / 10;
 }
 
 .g {
-  grid-area: 6 / 3 / 11 / 6;
-  margin-left: 30px;
+  grid-area: 5 / 2 / 9 / 6;
+  margin: 0;
   ul {
     padding: 5px 0px;
   }
@@ -162,16 +150,12 @@ p {
     line-height: 1.5rem;
     font-weight: 700;
   }
-  @media #{$xs-only} {
-    grid-area: 5 / 2 / 9 / 6;
-    margin: 0;
-  }
 }
 
 .h {
-  grid-area: 6 / 6 / 8 / 10;
-  padding-left: 10px;
-  margin-top: -3px;
+  grid-area: 10 / 2 / 11 / 12;
+  margin: 0;
+  padding: 0;
   a {
     color: white;
     text-decoration: none;
@@ -186,17 +170,12 @@ p {
       visibility: visible;
     }
   }
-  @media #{$xs-only} {
-    grid-area: 11 / 2 / 11 / 12;
-    margin: 0;
-    padding: 0;
-  }
 }
 
 // Contact
 .contact {
   height: 100vh;
-  width: 100%;
+  // width: 100%;
   background: linear-gradient($gradient-yellow, $gradient-green);
   h3 {
     text-transform: uppercase;
@@ -213,39 +192,31 @@ p {
 .i {
   font-style: italic;
   font-size: 16px;
-  grid-area: 2 / 9 / 3 / 11;
+  grid-area: 2 / 6 / 3 / 13;
   a {
     color: white;
     text-decoration: none;
   }
-  @media #{$xs-only} {
-    grid-area: 2 / 6 / 3 / 13;
-  }
 }
 
 .j {
-  grid-area: 4 / 5 / 5 / 9;
-  @media #{$xs-only} {
-    grid-area: 3 / 2 / 4 / 7;
-  }
+  grid-area: 3 / 2 / 4 / 7;
 }
 
 
 //Contact form
 .contact-form {
-  grid-area: 5 / 5 / 10 / 9;
+  grid-area: 4 / 2 / 10 / 12;
   margin-top: 20px;
-  @media #{$xs-only} {
-    grid-area: 4 / 2 / 10 / 12;
-  }
 }
 
 .contact-input {
-  margin-right: 26px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-control {
-  width: 100%;
+  // width: 100%;
   height: 36px;
   padding: 6px 12px;
   font-size: 14px;
@@ -298,9 +269,7 @@ textarea:valid + label, {
   transition:all 0ms ease;
   transition-property: color;
   color: white;
-  @media #{$xs-only} {
-    visibility: hidden;
-  }
+  visibility: hidden;
 }
 
 input:valid:focus + label,
@@ -314,7 +283,7 @@ textarea:valid:focus + label {
 }
 
 .nav {
-  width: 100%;
+  // width: 100%;
   height:75px;
   background-color: rgba(0, 0, 0, 1);
   background-color:white;
@@ -341,16 +310,10 @@ textarea:valid:focus + label {
     color: $black;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 0px 40px;
+    margin: 0 20px;
     font-size: 12px;
     &:active {
       border-bottom: 3px solid $aqua;
-    }
-    @media #{$xs-only} {
-      margin: 0 20px;
-      &:active {
-        border-bottom: 3px solid $aqua;
-      }
     }
   }
 }
@@ -365,9 +328,7 @@ textarea:valid:focus + label {
   float: left;
   width: 50px;
   padding: 14px 35px;
-  @media #{$xs-only} {
-    visibility: hidden;
-  }
+  visibility: hidden;
 }
 
 .fix{
@@ -403,4 +364,112 @@ textarea:valid:focus + label {
 .anchor {
   padding-top: 50px;
   margin-top: -50px;
+}
+
+@media #{$sm-up}, #{$sm-down} {
+  .c {
+    grid-area: 6 / 3 / 11 / 8;
+  }
+  .h {
+    grid-area: 8 / 6 / 9 / 10;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media #{$md-up} {
+  .c {
+    grid-area: 6 / 3 / 11 / 7;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .h {
+    grid-area: 6 / 6 / 8 / 10;
+    margin-top: -3px;
+    padding-left: 10px;
+  }
+}
+
+@media #{$sm-up} {
+  .grid {
+    display: grid;
+    margin: auto;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    padding: 0px;
+  }
+
+  .pop-image img {
+    width: 95%;
+    display: block;
+  }
+
+  .b {
+    grid-area: 4 / 5 / 5 / 9;
+  }
+
+  .skills {
+    height: 100vh;
+  }
+
+  .d {
+    grid-area: 4 / 5 / 5 / 8;
+  }
+
+  .skill-des {
+    grid-area: 6 / 3 / 9 / 7;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .skill-dev {
+    grid-area: 6 / 5 / 8 / 11;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .skillset {
+    grid-area: 2 / 8 / 7 / 12;
+    ul li:hover {
+      color: $gradient-aqua;
+    }
+  }
+
+  .f {
+    grid-area: 4 / 5 / 5 / 9;
+  }
+
+  .g {
+    grid-area: 6 / 3 / 11 / 6;
+    margin-left: 30px;
+  }
+
+  .i {
+    grid-area: 2 / 9 / 3 / 12;
+    line-height: 1.4em
+  }
+
+  .j {
+    grid-area: 4 / 5 / 5 / 9;
+  }
+
+  .contact-form {
+    grid-area: 6 / 4 / 12 / 10;
+    margin-left: 30px;
+  }
+
+  input:valid + label,
+  textarea:valid + label, {
+    visibility: visible;
+  }
+
+  #menu {
+    a {
+      margin: 0px 40px;
+    }
+  }
+
+  .logo-fix > img {
+    visibility: visible;
+  }
 }
